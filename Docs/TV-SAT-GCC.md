@@ -35,8 +35,8 @@ Somente a troca automática da página de agendamentos é alterada no SAT.
 
 ## Limites existentes
 
-A sessão de exibição do GCC continua exigindo login institucional e vence em até
-12 horas. Se estiver expirada, a página informa a necessidade de login e volta
+A sessão de exibição do GCC continua exigindo login institucional e vence conforme
+`AUTH_SESSION_TTL` (padrão 12 horas; na TV recomenda-se 604800 = 7 dias). Se estiver expirada, a página informa a necessidade de login e volta
 ao SAT em 20 segundos. Clicar em **Fazer login e configurar avisos** cancela esse
 retorno para permitir o login. Um carregamento inicial lento volta ao SAT em 30 s.
 Uma falha de rede que impeça o navegador de carregar o domínio do GCC por completo

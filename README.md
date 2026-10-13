@@ -301,7 +301,7 @@ OPENAI_API_KEY=
 |---|---|
 | `APP_ENV` | Ambiente de execução. |
 | `AUTH_SESSION_SECRET` | Segredo utilizado pelas sessões do GCC. |
-| `AUTH_SESSION_TTL` | Validade da sessão, em segundos. |
+| `AUTH_SESSION_TTL` | Validade da sessão, em segundos (de 900 a 2592000, ou seja, 15 min a 30 dias). Padrão 43200 (12 h); a TV usa 604800 (7 dias) para não pedir login todo dia. |
 | `AUTH_ALLOWED_DOMAINS` | Domínios de e-mail autorizados. |
 | `AUTH_ADMIN_EMAILS` | Contas com acesso administrativo. |
 | `GLPI_URL` | Endereço da API REST do GLPI acessado pelo backend. |

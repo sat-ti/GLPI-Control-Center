@@ -107,7 +107,8 @@ final class AuthService
     }
 
     $now = time();
-    $ttl = max(900, min(43200, (int) ($config['auth']['session_ttl'] ?? 43200)));
+    // Validade definida por AUTH_SESSION_TTL (padrão 12 h), entre 15 min e 30 dias.
+    $ttl = max(900, min(2592000, (int) ($config['auth']['session_ttl'] ?? 43200)));
     $csrf = self::base64UrlEncode(random_bytes(32));
     $profile = in_array($email, $config['auth']['admin_emails'] ?? [], true) ? 'ADMIN' : 'SUPORTE';
     $sessionClaims = [
